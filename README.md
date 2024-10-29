@@ -3,7 +3,7 @@
 This repository contains a machine learning model designed to predict 
 customer churn in an Iranian telecom company. 
 The project includes model training, evaluation, deployment via Docker, 
-and a REST API for serving predictions.
+and a RESTful API for serving predictions.
 
 ## Table of Contents
 1. - [Installation](#installation)
