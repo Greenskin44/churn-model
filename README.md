@@ -25,6 +25,7 @@ To set up this project locally, follow these steps:
        git clone https://github.com/Greenskin44/churn-prediction.git
        cd churn-prediction
 
+
 2. **Usage**
   a. Train and Evaluate the Model To train and evaluate the model, use:
      Iranian Churn Prediction Model.ipynb
@@ -35,35 +36,38 @@ To set up this project locally, follow these steps:
     model = joblib.load('Optimized_IRN_churn_prediction_model.pkl')
     predictions = model.predict(X_test)
   
-  c. Model Explanation Use LIME for explainability on a single instance
-  or SHAP (if supported):
+c. Model Explanation Use LIME for explainability on a single instance
+    or SHAP (if supported):
     from lime import lime_tabular
     explainer = lime_tabular.LimeTabularExplainer(...)
     explanation = explainer.explain_instance(X_test.iloc[0],           
     model.predict_proba)
 
+
 3. **Model Explainability**
-   a.LIME (Local Interpretable Model-agnostic Explanations) has been       implemented for feature importance. To explain a specific               prediction, use:
-      from lime import lime_tabular
-      explainer = lime_tabular.LimeTabularExplainer(...)
-      explanation = explainer.explain_instance(X_test.iloc[0],                model.predict_proba)
-      explanation.show_in_notebook()
+   ```a. LIME (Local Interpretable Model-agnostic Explanations) has been implemented for feature importance. To explain a specific prediction, use:
+   from lime import lime_tabular
+   explainer = lime_tabular.LimeTabularExplainer(...)
+   explanation = explainer.explain_instance(X_test.iloc[0],model.predict_proba)
+   explanation.show_in_notebook()
 
-4. ***Docker Deployment***
+5. ***Docker Deployment***
    a. This project includes Docker setup for consistent deployment. For full Docker instructions, see Docker/README.md.
-   b. Basic Docker Commands:
-     Build Docker Image: docker build -t churn-model .
-     Run Docker Container: docker run -p 5000:5000 churn-model
+      ```b. Basic Docker Commands:
+         docker build -t churn-model .
+         docker run -p 5000:5000 churn-model
 
-5. API Instructions
+7. API Instructions
   a. The API exposes a /predict endpoint for making predictions. Detailed API usage can be found in API/README.md.
-  b. Run API Locally: python app.py
-  c. API Endpoint: POST /predict for prediction with JSON data input.
+   ```b. Run API Locally:
+      python app.py
+  c. API Endpoint:
+POST /predict for prediction with JSON data input.
 
-6. CI/CD Pipeline
-   a. We use GitHub Actions for continuous integration and deployment.       For details on the CI/CD setup, see .github/README.md.
+9. CI/CD Pipeline
+   a. We use GitHub Actions for continuous integration and deployment. For details on the CI/CD setup, see .github/README.md.
 
-7. License
-   a. This project is licensed under the Apache 2.0 License. See the       LICENSE file for details.
+10. License
+   a. This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
 
   
