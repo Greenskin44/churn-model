@@ -28,16 +28,14 @@ To set up this project locally, follow these steps:
 
 2. **Usage**
   a. Train and Evaluate the Model To train and evaluate the model, use:
-     Iranian Churn Prediction Model.ipynb
-     import joblib
-     
-  b. Model Inference For predictions using the saved model:
+     ```Iranian Churn Prediction Model.ipynb
     import joblib
     model = joblib.load('Optimized_IRN_churn_prediction_model.pkl')
     predictions = model.predict(X_test)
   
 c. Model Explanation Use LIME for explainability on a single instance
     or SHAP (if supported):
+    
     from lime import lime_tabular
     explainer = lime_tabular.LimeTabularExplainer(...)
     explanation = explainer.explain_instance(X_test.iloc[0],           
