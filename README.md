@@ -43,11 +43,11 @@ To set up this project locally, follow these steps:
     model.predict_proba)
 
 3. **Model Explainability**
-   a.LIME (Local Interpretable Model-agnostic Explanations) has been implemented for feature importance. To explain a specific prediction, use:
-from lime import lime_tabular
-explainer = lime_tabular.LimeTabularExplainer(...)
-explanation = explainer.explain_instance(X_test.iloc[0], model.predict_proba)
-explanation.show_in_notebook()
+   a.LIME (Local Interpretable Model-agnostic Explanations) has been       implemented for feature importance. To explain a specific               prediction, use:
+      from lime import lime_tabular
+      explainer = lime_tabular.LimeTabularExplainer(...)
+      explanation = explainer.explain_instance(X_test.iloc[0],                model.predict_proba)
+      explanation.show_in_notebook()
 
 4. ***Docker Deployment***
    a. This project includes Docker setup for consistent deployment. For full Docker instructions, see Docker/README.md.
@@ -61,9 +61,9 @@ explanation.show_in_notebook()
   c. API Endpoint: POST /predict for prediction with JSON data input.
 
 6. CI/CD Pipeline
-   a. We use GitHub Actions for continuous integration and deployment. For details on the CI/CD setup, see .github/README.md.
+   a. We use GitHub Actions for continuous integration and deployment.       For details on the CI/CD setup, see .github/README.md.
 
 7. License
-   a. This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
+   a. This project is licensed under the Apache 2.0 License. See the       LICENSE file for details.
 
   
