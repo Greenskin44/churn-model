@@ -49,23 +49,23 @@ c. Model Explanation Use LIME for explainability on a single instance
    explanation = explainer.explain_instance(X_test.iloc[0],model.predict_proba)
    explanation.show_in_notebook()
 
-5. ***Docker Deployment***
+4. ***Docker Deployment***
    a. This project includes Docker setup for consistent deployment. For full Docker instructions, see Docker/README.md.
       ```b. Basic Docker Commands:
          docker build -t churn-model .
          docker run -p 5000:5000 churn-model
 
-7. API Instructions
+5. API Instructions
   a. The API exposes a /predict endpoint for making predictions. Detailed API usage can be found in API/README.md.
    ```b. Run API Locally:
       python app.py
   c. API Endpoint:
 POST /predict for prediction with JSON data input.
 
-9. CI/CD Pipeline
+6. CI/CD Pipeline
    a. We use GitHub Actions for continuous integration and deployment. For details on the CI/CD setup, see .github/README.md.
 
-10. License
+7. License
    a. This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
 
   
