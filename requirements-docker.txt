@@ -1,0 +1,18 @@
+# Production Flask API Requirements
+# Minimal dependencies for the Iranian Churn Prediction Flask API
+
+# Core Flask application
+Flask==3.0.3
+Werkzeug==3.0.4
+
+# Data processing and ML
+pandas==2.2.3
+numpy==1.26.0
+scikit-learn==1.5.2
+joblib==1.4.2
+
+# Production WSGI server
+gunicorn==23.0.0
+
+# Additional utilities
+requests==2.32.3

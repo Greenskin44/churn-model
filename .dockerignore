@@ -1,0 +1,68 @@
+# Iranian Churn Prediction - Docker ignore file
+# Exclude unnecessary files from Docker context to optimize build
+
+# Git files
+.git
+.gitignore
+.git/*
+
+# Python cache and compiled files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache
+*.egg-info
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation and analysis charts (keep model files but exclude charts)
+Churn-prediction/Analysis_Charts/
+*.png
+*.jpg
+*.jpeg
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# Development and test files
+tests/
+test_*.py
+*_test.py
+
+# Docker files (don't need to copy into container)
+Dockerfile*
+docker-compose*.yml
+
+# README and documentation (optional - remove if you want them in container)
+README.md
+LICENSE
+
+# Large data files that aren't needed for API
+*.csv
+*.xlsx
+*.json
+
+# Node modules if any
+node_modules/
